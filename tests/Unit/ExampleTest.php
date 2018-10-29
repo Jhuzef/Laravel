@@ -19,4 +19,12 @@ class ExampleTest extends TestCase
         $this->assertTrue($user->save());
 
     }
+
+    public function testUserUpdate()
+    {
+        $user = factory(\App\User::class)->make();
+        $user->name = 'Steve Smith';
+        $this->assertTrue($user->name == 'Steve Smith');
+
+    }
 }
