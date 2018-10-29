@@ -40,4 +40,12 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function testContact()
+    {
+        $user = factory(\App\User::class)->make();
+        $response = $this->actingAs($user)->get('/contact');
+
+        $response->assertStatus(200);
+    }
 }
