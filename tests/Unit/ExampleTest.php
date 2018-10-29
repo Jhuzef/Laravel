@@ -76,4 +76,11 @@ class ExampleTest extends TestCase
 
     }
 
+    public function testCarInteger()
+    {
+        $car = factory(\App\Car::class)->make();
+        $this->assertInternalType('integer', $car->Year);
+
+    }
+
 }
