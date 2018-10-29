@@ -12,8 +12,11 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function testBasicTest()
+    public function testUserInsertion()
     {
-        $this->assertTrue(true);
+        $user = factory(\App\User::class)->make();
+        $this->assertInstanceOf( \App\User::class, $user);
+        $this->assertTrue($user->save());
+
     }
 }
