@@ -61,4 +61,11 @@ class ExampleTest extends TestCase
 
     }
 
+    public function testCarDelete()
+    {
+        $car = factory(\App\Car::class)->make();
+        $this->assertEquals(null, $car->delete()); #Deleting a record returns null
+
+    }
+
 }
