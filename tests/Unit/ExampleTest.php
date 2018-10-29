@@ -83,4 +83,28 @@ class ExampleTest extends TestCase
 
     }
 
+    public function testCarModel()
+    {
+        $car = factory(\App\Car::class)->make();
+        if($car->Make == 'Honda') {
+            $this->assertEquals('Honda', $car->Make);
+        }
+
+        else if($car->Make == 'Toyota') {
+            $this->assertEquals('Toyota', $car->Make);
+        }
+
+        else if($car->Make == 'Ford') {
+            $this->assertEquals('Ford', $car->Make);
+        }
+
+        else {
+            $this->assertTrue(false);
+        }
+
+
+
+
+    }
+
 }
