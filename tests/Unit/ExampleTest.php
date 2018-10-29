@@ -52,4 +52,13 @@ class ExampleTest extends TestCase
 
     }
 
+
+    public function testCarUpdate()
+    {
+        $user = factory(\App\Car::class)->make();
+        $user->year = 2000;
+        $this->assertTrue($user->year == 2000);
+
+    }
+
 }
