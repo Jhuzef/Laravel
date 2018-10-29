@@ -27,4 +27,11 @@ class ExampleTest extends TestCase
         $this->assertTrue($user->name == 'Steve Smith');
 
     }
+
+    public function testUserDelete()
+    {
+        $user = factory(\App\User::class)->make();
+        $this->assertEquals(null, $user->delete()); #Deleting a record returns null
+
+    }
 }
