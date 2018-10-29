@@ -32,4 +32,12 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function testAbout()
+    {
+        $user = factory(\App\User::class)->make();
+        $response = $this->actingAs($user)->get('/about');
+
+        $response->assertStatus(200);
+    }
 }

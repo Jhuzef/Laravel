@@ -48,6 +48,16 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 @endif
                             </li>
+                            <li class="nav-item">
+                                @if (Route::has('about'))
+                                    <a class="nav-link" href="{{ route('about') }}">{{ __('About') }}</a>
+                                @endif
+                            </li>
+                            <li class="nav-item">
+                                @if (Route::has('contact'))
+                                    <a class="nav-link" href="{{ route('contact') }}">{{ __('Contact') }}</a>
+                                @endif
+                            </li>
 
                         @else
                             <li class="nav-item dropdown">
