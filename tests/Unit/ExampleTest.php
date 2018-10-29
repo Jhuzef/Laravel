@@ -44,4 +44,12 @@ class ExampleTest extends TestCase
     }
 
 
+    public function testCarInsertion()
+    {
+        $car = factory(\App\Car::class)->make();
+        $this->assertInstanceOf( \App\Car::class, $car);
+        $this->assertTrue($car->save());
+
+    }
+
 }
