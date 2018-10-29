@@ -34,4 +34,14 @@ class ExampleTest extends TestCase
         $this->assertEquals(null, $user->delete()); #Deleting a record returns null
 
     }
+
+    public function testUserSeed()
+    {
+        $this->artisan("migrate:refresh");
+        $this->artisan("db:seed");
+        $this->assertEquals(50, \App\User::count());
+
+    }
+
+
 }
