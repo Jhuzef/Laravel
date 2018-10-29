@@ -68,4 +68,12 @@ class ExampleTest extends TestCase
 
     }
 
+    public function testCarSeed()
+    {
+        $this->artisan("migrate:refresh");
+        $this->artisan("db:seed");
+        $this->assertEquals(50, \App\Car::count());
+
+    }
+
 }
