@@ -101,9 +101,12 @@ class ExampleTest extends TestCase
         else {
             $this->assertTrue(false);
         }
+    }
 
-
-
+    public function testCarString()
+    {
+        $car = factory(\App\Car::class)->make();
+        $this->assertInternalType('string', $car->Model);
 
     }
 
