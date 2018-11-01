@@ -63,7 +63,7 @@ return [
 
         'pgsql' => array(
             'driver'   => 'pgsql',
-            'host'     => $host,
+            'host'     => env('DB_HOST', $host),
             'database' => $database,
             'username' => $username,
             'password' => $password,
